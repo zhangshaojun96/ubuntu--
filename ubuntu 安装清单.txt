@@ -1,0 +1,6 @@
+ext4 /boot 4g
+swap 10g
+biosgrub 4g
+/ 50g
+/home 其余空间
+启动器 选择标注win10的

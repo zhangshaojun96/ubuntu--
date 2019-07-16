@@ -1,0 +1,7 @@
+mkdir ~/.pip
+
+vim ~/.pip/pip.conf
+
+–¥»Î
+[global]
+index-url = https://pypi.tuna.tsinghua.edu.cn/simple

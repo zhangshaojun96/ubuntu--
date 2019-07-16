@@ -1,0 +1,7 @@
+sudo dpkg -i sogoupinyin_2.2.0.0108_amd64.deb
+
+sudo apt-get -f install
+
+sudo dpkg -i sogoupinyin_2.2.0.0108_amd64.deb
+
+系统重启

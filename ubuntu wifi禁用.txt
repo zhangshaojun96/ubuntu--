@@ -1,0 +1,21 @@
+1)终端输入命令，查看当前wifi开关状态，联想电脑会有出现ideapad_laptop(影响无线wifi开关的)：
+
+                                rfkill list all
+
+2）排除软硬件的block干扰，输入以下命令：
+
+                         rfkill unblock all
+
+3)若第二步还不成功，则输入修改配置的命令：
+
+                               sudo gedit /etc/modprobe.d/ideapad.conf
+
+4)打开文件后在第一行输入：
+
+                             blacklist ideapad_laptop
+
+5)保存关闭后再执行命令：
+
+                               sudo modprobe -r ideapad_laptop
+
+6)重启后右上角的wifi就可以使用了。

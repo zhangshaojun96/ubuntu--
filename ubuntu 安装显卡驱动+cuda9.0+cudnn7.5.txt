@@ -1,0 +1,59 @@
+1、驱动安装
+
+进入官网 https://www.nvidia.cn/Download/index.aspx?lang=cn
+选择合适选项，下载驱动
+
+将驱动（.run）文件复制到~目录下
+
+sudo init 3
+
+（若呈现光标闪动画面，ctrl+Alt+F2）
+
+登录账号
+
+sudo sh .run文件
+
+sudo init 5
+
+2、cuda安装
+
+进入官网https://developer.nvidia.com/cuda-90-download-archive
+选择合适选项，下载cuda（.run文件）
+
+sudo sh .run文件
+
+ctrl+c 跳过协议
+
+accept
+
+n（不要装driver，不要装driver，不要装driver）
+
+后面y或默认
+
+等待安装完毕
+
+sudo gedit ~/.bashrc
+
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-9.0/lib64
+export PATH=$PATH:/usr/local/cuda-9.0/bin
+export CUDA_HOME=$CUDA_HOME:/usr/local/cuda-9.0
+
+source ~/.bashrc
+
+nvcc --version
+
+3、cudnn 安装
+
+按需求下载cudnn的安装文件：https://developer.nvidia.com/rdp/cudnn-archive
+
+下载后解压
+
+sudo cp cuda/include/cudnn.h /usr/local/cuda/include/
+ 
+sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64/
+ 
+sudo chmod a+r /usr/local/cuda/include/cudnn.h
+ 
+sudo chmod a+r /usr/local/cuda/lib64/libcudnn*
+
+cat /usr/local/cuda/include/cudnn.h | grep CUDNN_MAJOR -A 2

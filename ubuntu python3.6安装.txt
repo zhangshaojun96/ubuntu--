@@ -1,0 +1,26 @@
+sudo apt-get install software-properties-common
+
+sudo add-apt-repository ppa:jonathonf/python-3.6
+sudo apt-get update
+sudo apt-get install python3.6
+
+cd /user/bin
+rm python
+ln -s python3.6m python
+
+sudo apt-get install python3.6-gdbm
+
+
+sudo apt-get install python-pip
+
+sudo apt-get install python3-pip
+
+
+sudo apt-get remove --purge python-apt
+
+sudo apt-get install -f -y python-apt
+
+cd /usr/lib/python3/dist-packages/
+
+sudo cp apt_pkg.cpython-35m-x86_64-linux-gnu.so apt_pkg.cpython-36m-x86_64-linux-gnu.so
+
